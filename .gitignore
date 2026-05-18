@@ -32,6 +32,14 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# next-sitemap generated files (regenerated on build)
+public/sitemap*.xml
+public/robots.txt
+
+# preview tool
+.claude/launch.json
 
 # vercel
 .vercel
