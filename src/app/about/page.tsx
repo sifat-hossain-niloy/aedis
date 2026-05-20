@@ -8,12 +8,12 @@ import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/Anim
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Aedis Solutions Ltd — a professional property maintenance company based in London, committed to delivering quality workmanship across North West London.",
+    "Learn about Aedis Solutions Ltd — a professional property maintenance company based in London, committed to delivering quality workmanship across London.",
   alternates: { canonical: "https://www.aedis.ltd/about" },
   openGraph: {
     title: "About Aedis Solutions Ltd",
     description:
-      "Professional property maintenance delivered to a commercial standard across North West London.",
+      "Professional property maintenance delivered to a commercial standard across London.",
     url: "https://www.aedis.ltd/about",
   },
 };
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Our aim is to become the go-to property maintenance partner for
-                  homeowners and businesses across North West London — trusted not
+                  homeowners and businesses across London — trusted not
                   just for the quality of the work, but for the consistency and
                   reliability of our service.
                 </p>

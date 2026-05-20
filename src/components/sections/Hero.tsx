@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
 
-const serviceAreas = ["Hendon", "Finchley", "Golders Green", "Southgate"];
+// Specific coverage areas TBC — advertising London-wide for now
 
 export function Hero() {
   return (
@@ -55,7 +55,7 @@ export function Hero() {
             className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl"
           >
             Expert plumbing, electrical, carpentry, CCTV, alarms, tiling and
-            general maintenance across North West London — carried out to a
+            general maintenance across London — carried out to a
             consistently high standard, on time, every time.
           </motion.p>
 
@@ -90,17 +90,11 @@ export function Hero() {
           >
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <MapPin className="w-4 h-4 text-brand-accent shrink-0" />
-              <span>Serving:</span>
+              <span>Covering:</span>
             </div>
-            {serviceAreas.map((area) => (
-              <span
-                key={area}
-                className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium border border-white/15"
-              >
-                {area}
-              </span>
-            ))}
-            <span className="text-white/40 text-xs">& surrounding areas</span>
+            <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium border border-white/15">
+              London-wide
+            </span>
           </motion.div>
         </div>
 
@@ -133,7 +127,7 @@ export function Hero() {
               <p className="text-xs text-white/45 uppercase tracking-wider">
                 Service Area
               </p>
-              <p className="text-sm font-semibold">North West London</p>
+              <p className="text-sm font-semibold">London-wide</p>
             </div>
           </div>
         </motion.div>

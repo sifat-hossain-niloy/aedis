@@ -13,12 +13,12 @@ import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/Anim
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Explore all property maintenance services offered by Aedis Solutions Ltd — plumbing, electrical, tiling, carpentry, alarms, CCTV, and general maintenance across North West London.",
+    "Explore all property maintenance services offered by Aedis Solutions Ltd — plumbing, electrical, tiling, carpentry, alarms, CCTV, and general maintenance across London.",
   alternates: { canonical: "https://www.aedis.ltd/services" },
   openGraph: {
     title: "Property Maintenance Services | Aedis Solutions Ltd",
     description:
-      "Expert plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance across North West London.",
+      "Expert plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance across London.",
     url: "https://www.aedis.ltd/services",
   },
 };

@@ -144,9 +144,7 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-brand-accent" />
                 <span>
-                  Serving North West London
-                  <br />
-                  Hendon · Finchley · Golders Green · Southgate
+                  Serving London & Surrounding Areas
                 </span>
               </li>
             </ul>

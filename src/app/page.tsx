@@ -11,7 +11,7 @@ import { LocalBusinessJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Professional Property Maintenance London | Aedis Solutions Ltd",
   description:
-    "Expert property maintenance across North West London — plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance. Professional, reliable, and guaranteed.",
+    "Expert property maintenance across London — plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance. Professional, reliable, and guaranteed.",
   alternates: { canonical: "https://www.aedis.ltd" },
 };
 

@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 const stats = [
   { label: "Established", value: "2026" },
   { label: "Services Offered", value: "7+" },
-  { label: "Service Area", value: "NW London" },
+  { label: "Service Area", value: "London" },
   { label: "Guarantee", value: "100%" },
 ];
 

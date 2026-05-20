@@ -5,7 +5,7 @@ export function LocalBusinessJsonLd() {
     "@id": "https://www.aedis.ltd/#business",
     name: "Aedis Solutions Ltd",
     description:
-      "Professional property maintenance services across North West London including plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance.",
+      "Professional property maintenance services across London including plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance.",
     url: "https://www.aedis.ltd",
     email: "hello@aedis.ltd",
     address: {
@@ -22,10 +22,6 @@ export function LocalBusinessJsonLd() {
     },
     areaServed: [
       { "@type": "City", name: "London" },
-      { "@type": "Neighborhood", name: "Hendon" },
-      { "@type": "Neighborhood", name: "Finchley" },
-      { "@type": "Neighborhood", name: "Golders Green" },
-      { "@type": "Neighborhood", name: "Southgate" },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

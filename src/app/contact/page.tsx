@@ -7,12 +7,12 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 export const metadata: Metadata = {
   title: "Contact Us — Get a Free Quote",
   description:
-    "Contact Aedis Solutions Ltd for a free, no-obligation property maintenance quote. Serving North West London — Hendon, Finchley, Golders Green, Southgate and surrounding areas.",
+    "Contact Aedis Solutions Ltd for a free, no-obligation property maintenance quote. Serving London and surrounding areas.",
   alternates: { canonical: "https://www.aedis.ltd/contact" },
   openGraph: {
     title: "Contact Aedis Solutions Ltd — Free Quote",
     description:
-      "Get a free property maintenance quote. Serving North West London.",
+      "Get a free property maintenance quote. Serving London and surrounding areas.",
     url: "https://www.aedis.ltd/contact",
   },
 };
@@ -28,9 +28,9 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Service Area",
-    value: "North West London",
+    value: "London & Surrounding Areas",
     href: null,
-    description: "Hendon · Finchley · Golders Green · Southgate & surrounding areas",
+    description: "Get in touch to confirm coverage for your area",
   },
   {
     icon: Clock,

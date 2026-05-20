@@ -8,12 +8,12 @@ import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/Anim
 export const metadata: Metadata = {
   title: "Gallery — Our Work",
   description:
-    "View completed projects and work examples from Aedis Solutions Ltd — property maintenance, plumbing, electrical, tiling, carpentry and more across North West London.",
+    "View completed projects and work examples from Aedis Solutions Ltd — property maintenance, plumbing, electrical, tiling, carpentry and more across London.",
   alternates: { canonical: "https://www.aedis.ltd/gallery" },
   openGraph: {
     title: "Gallery — Our Work | Aedis Solutions Ltd",
     description:
-      "See examples of our property maintenance work across North West London.",
+      "See examples of our property maintenance work across London.",
     url: "https://www.aedis.ltd/gallery",
   },
 };

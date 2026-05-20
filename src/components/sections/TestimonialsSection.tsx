@@ -21,7 +21,7 @@ export function TestimonialsSection({ limit = 3, showViewAll = true }: Props) {
           <SectionHeading
             eyebrow="Client Reviews"
             title="What Our Clients Say"
-            description="We let the quality of our work speak for itself — here is what our clients across North West London have to say."
+            description="We let the quality of our work speak for itself — here is what our clients across London have to say."
             centered
           />
         </AnimatedSection>

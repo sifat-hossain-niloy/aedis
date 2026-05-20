@@ -30,13 +30,13 @@ export const services: Service[] = [
     ],
     metaTitle: "General Property Maintenance London | Aedis Solutions Ltd",
     metaDescription:
-      "Professional general property maintenance in North West London. Reliable, experienced tradespeople serving Hendon, Finchley, Golders Green & Southgate.",
+      "Professional general property maintenance in London. Reliable, experienced tradespeople serving residential and commercial clients across the city.",
   },
   {
     slug: "plumbing",
     name: "Plumbing",
     shortDescription:
-      "Expert plumbing services for residential and commercial properties across North West London.",
+      "Expert plumbing services for residential and commercial properties across London.",
     longDescription:
       "Our skilled plumbers deliver reliable solutions for everything from leaking pipes and dripping taps to full bathroom installations. We work cleanly, efficiently, and ensure all plumbing work is completed to the highest standard with minimal disruption to your property.",
     icon: "Droplets",
@@ -49,9 +49,9 @@ export const services: Service[] = [
       "Drainage solutions",
       "Emergency plumbing call-outs",
     ],
-    metaTitle: "Plumbing Services North West London | Aedis Solutions Ltd",
+    metaTitle: "Plumbing Services London | Aedis Solutions Ltd",
     metaDescription:
-      "Reliable plumbing in North West London. Emergency repairs to full installations — Aedis Solutions serves Hendon, Finchley, Golders Green & Southgate.",
+      "Reliable plumbing in London. Emergency repairs to full installations — Aedis Solutions serves residential and commercial clients across the city.",
   },
   {
     slug: "electrical",
@@ -70,9 +70,9 @@ export const services: Service[] = [
       "Full and partial rewires",
       "Electrical Installation Condition Reports (EICR)",
     ],
-    metaTitle: "Electrician North West London | Aedis Solutions Ltd",
+    metaTitle: "Electrician London | Aedis Solutions Ltd",
     metaDescription:
-      "Professional electrical services in North West London. Safe, qualified electricians serving Hendon, Finchley, Golders Green & Southgate.",
+      "Professional electrical services in London. Safe, qualified electricians serving residential and commercial clients across the city.",
   },
   {
     slug: "tiling",
@@ -91,9 +91,9 @@ export const services: Service[] = [
       "Tile repairs and re-grouting",
       "Large-format tile installation",
     ],
-    metaTitle: "Tiling Services North West London | Aedis Solutions Ltd",
+    metaTitle: "Tiling Services London | Aedis Solutions Ltd",
     metaDescription:
-      "Expert tiling in North West London. Kitchen, bathroom, floor and wall tiling by specialists serving Hendon, Finchley, Golders Green & Southgate.",
+      "Expert tiling in London. Kitchen, bathroom, floor and wall tiling by experienced specialists across the city.",
   },
   {
     slug: "alarms",
@@ -112,9 +112,9 @@ export const services: Service[] = [
       "Regular testing and certification",
       "Commercial and residential systems",
     ],
-    metaTitle: "Alarm Installation North West London | Aedis Solutions Ltd",
+    metaTitle: "Alarm Installation London | Aedis Solutions Ltd",
     metaDescription:
-      "Professional alarm installation and maintenance in North West London. Securing homes and businesses in Hendon, Finchley, Golders Green & Southgate.",
+      "Professional alarm installation and maintenance in London. Securing homes and businesses across the city.",
   },
   {
     slug: "cctv",
@@ -133,9 +133,9 @@ export const services: Service[] = [
       "Recording and storage solutions",
       "System maintenance and upgrades",
     ],
-    metaTitle: "CCTV Installation North West London | Aedis Solutions Ltd",
+    metaTitle: "CCTV Installation London | Aedis Solutions Ltd",
     metaDescription:
-      "Professional CCTV installation in North West London. HD security cameras for homes and businesses in Hendon, Finchley, Golders Green & Southgate.",
+      "Professional CCTV installation in London. HD security cameras for homes and businesses across the city.",
   },
   {
     slug: "carpentry",
@@ -154,9 +154,9 @@ export const services: Service[] = [
       "Kitchen cabinet installation",
       "Bespoke joinery and woodwork",
     ],
-    metaTitle: "Carpentry Services North West London | Aedis Solutions Ltd",
+    metaTitle: "Carpentry Services London | Aedis Solutions Ltd",
     metaDescription:
-      "Expert carpentry and joinery in North West London. Bespoke fitted furniture and woodwork by skilled carpenters in Hendon, Finchley & surrounding areas.",
+      "Expert carpentry and joinery in London. Bespoke fitted furniture and woodwork by skilled carpenters across the city.",
   },
 ];
 
