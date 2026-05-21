@@ -38,8 +38,8 @@ yarn-error.log*
 public/sitemap*.xml
 public/robots.txt
 
-# preview tool
-.claude/launch.json
+# claude / AI tooling
+.claude/
 
 # vercel
 .vercel
