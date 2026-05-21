@@ -40,6 +40,12 @@ public/robots.txt
 
 # claude / AI tooling
 .claude/
+AGENTS.md
+CLAUDE.md
+
+# internal project docs (keep locally, not in repo)
+PROGRESS.md
+DEPLOYMENT.md
 
 # vercel
 .vercel
