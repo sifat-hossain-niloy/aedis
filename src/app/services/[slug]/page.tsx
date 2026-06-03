@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
-  Wrench, Droplets, Zap, LayoutGrid, BellRing, Camera, Hammer,
+  Wrench, Droplets, Zap, LayoutGrid, Hammer,
   CheckCircle2, ArrowLeft, ArrowRight, LucideIcon,
 } from "lucide-react";
 import { services, getServiceBySlug } from "@/data/services";
@@ -11,7 +11,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/AnimatedSection";
 
 const iconMap: Record<string, LucideIcon> = {
-  Wrench, Droplets, Zap, LayoutGrid, BellRing, Camera, Hammer,
+  Wrench, Droplets, Zap, LayoutGrid, Hammer,
 };
 
 export async function generateStaticParams() {

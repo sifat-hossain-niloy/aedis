@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Wrench, Droplets, Zap, LayoutGrid, BellRing, Camera, Hammer,
+  Wrench, Droplets, Zap, LayoutGrid, Hammer,
   ArrowRight, LucideIcon,
 } from "lucide-react";
 import { services } from "@/data/services";
@@ -13,7 +13,7 @@ import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/Anim
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Explore all property maintenance services offered by Aedis Solutions Ltd — plumbing, electrical, tiling, carpentry, alarms, CCTV, and general maintenance across London.",
+    "Explore all property maintenance services offered by Aedis Solutions Ltd — plumbing, electrical, carpentry, general maintenance, and tiling & building works across London.",
   alternates: { canonical: "https://www.aedis.ltd/services" },
   openGraph: {
     title: "Property Maintenance Services | Aedis Solutions Ltd",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const iconMap: Record<string, LucideIcon> = {
-  Wrench, Droplets, Zap, LayoutGrid, BellRing, Camera, Hammer,
+  Wrench, Droplets, Zap, LayoutGrid, Hammer,
 };
 
 export default function ServicesPage() {

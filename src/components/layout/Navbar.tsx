@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -32,9 +33,7 @@ export function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const isHome = pathname === "/";
@@ -46,46 +45,35 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
         transparent
           ? "bg-transparent"
-          : "bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-100"
+          : "bg-white shadow-sm border-b border-slate-100"
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 py-3">
+        <div className="flex items-center justify-between py-3">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="relative w-10 h-10 flex items-center justify-center">
-              <div
-                className={cn(
-                  "w-9 h-9 rotate-45 flex items-center justify-center transition-colors duration-300",
-                  transparent ? "bg-white" : "bg-brand"
-                )}
-              >
-                <Home
-                  className={cn(
-                    "-rotate-45 w-4 h-4 transition-colors duration-300",
-                    transparent ? "text-brand" : "text-white"
-                  )}
-                />
+          <Link href="/" className="shrink-0" aria-label="Aedis Solutions Ltd — Home">
+            {transparent ? (
+              /* White text version for dark hero background */
+              <div className="leading-none py-1">
+                <span className="font-extrabold text-[18px] tracking-widest text-white block">
+                  AEDIS
+                </span>
+                <span className="text-[9px] tracking-[0.25em] text-white/70 font-medium block">
+                  SOLUTIONS LTD
+                </span>
               </div>
-            </div>
-            <div className="leading-none">
-              <span
-                className={cn(
-                  "font-extrabold text-[15px] tracking-wide transition-colors duration-300 block",
-                  transparent ? "text-white" : "text-brand"
-                )}
-              >
-                AEDIS SOLUTIONS
-              </span>
-              <span
-                className={cn(
-                  "text-[10px] tracking-[0.2em] font-medium transition-colors duration-300",
-                  transparent ? "text-white/70" : "text-slate-400"
-                )}
-              >
-                LTD
-              </span>
-            </div>
+            ) : (
+              /* Real logo on white navbar */
+              <Image
+                src="/logo.png"
+                alt="Aedis Solutions Ltd"
+                width={160}
+                height={52}
+                className="h-13 w-auto"
+                priority
+              />
+            )}
           </Link>
 
           {/* Desktop nav */}
@@ -133,11 +121,7 @@ export function Navbar() {
                   : "text-slate-700 hover:bg-slate-100"
               )}
             >
-              {menuOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
+              {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
