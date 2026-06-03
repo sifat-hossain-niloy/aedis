@@ -43,8 +43,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight text-balance"
           >
-            Complete Property Care.{" "}
-            <span className="text-brand-accent">Delivered Professionally.</span>
+            Comprehensive Property Maintenance.{" "}
+            <span className="text-brand-accent">Delivered With Precision.</span>
           </motion.h1>
 
           {/* Subtext */}

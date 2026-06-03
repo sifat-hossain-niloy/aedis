@@ -58,8 +58,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-white/65 text-sm leading-relaxed mb-6">
-              Professional property maintenance services across North West
-              London. Quality workmanship, guaranteed.
+              Professional property maintenance services across London.
+              Quality workmanship, guaranteed.
             </p>
             <div className="flex items-center gap-3">
               <a

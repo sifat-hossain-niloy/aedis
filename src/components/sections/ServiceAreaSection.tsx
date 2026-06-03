@@ -3,14 +3,13 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-// Specific coverage areas TBC — will be updated once confirmed
+// Coverage: Central, NW, W, SW, N London — to be refined with postcodes/areas later
 const areas = [
   "Central London",
-  "North London",
   "North West London",
-  "East London",
   "West London",
-  "South London",
+  "South West London",
+  "North London",
 ];
 
 export function ServiceAreaSection() {
