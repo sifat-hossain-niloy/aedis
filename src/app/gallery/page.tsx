@@ -19,14 +19,14 @@ export const metadata: Metadata = {
 };
 
 const placeholderProjects = [
-  { id: 1, title: "Bathroom Renovation", service: "Plumbing & Tiling", location: "Finchley", bg: "from-cyan-800 to-blue-900" },
-  { id: 2, title: "Kitchen Tiling", service: "Tiling", location: "Hendon", bg: "from-stone-700 to-slate-800" },
-  { id: 3, title: "CCTV Installation", service: "CCTV", location: "Golders Green", bg: "from-slate-700 to-slate-900" },
-  { id: 4, title: "Electrical Rewire", service: "Electrical", location: "Southgate", bg: "from-yellow-700 to-amber-900" },
-  { id: 5, title: "Fitted Wardrobes", service: "Carpentry", location: "Barnet", bg: "from-amber-700 to-orange-900" },
-  { id: 6, title: "Alarm System", service: "Alarms", location: "Finchley", bg: "from-red-800 to-rose-900" },
-  { id: 7, title: "Plumbing Repair", service: "Plumbing", location: "Hendon", bg: "from-blue-700 to-cyan-900" },
-  { id: 8, title: "Property Maintenance", service: "General Maintenance", location: "Golders Green", bg: "from-brand to-brand-dark" },
+  { id: 1, title: "Bathroom Renovation", service: "Plumbing & Tiling", location: "West London", bg: "from-cyan-800 to-blue-900" },
+  { id: 2, title: "Kitchen Tiling", service: "Tiling & Building Works", location: "North London", bg: "from-stone-700 to-slate-800" },
+  { id: 3, title: "Bespoke Fitted Wardrobes", service: "Carpentry", location: "Central London", bg: "from-amber-700 to-orange-900" },
+  { id: 4, title: "Electrical Rewire", service: "Electrical", location: "South West London", bg: "from-yellow-700 to-amber-900" },
+  { id: 5, title: "Full Bathroom Fit-Out", service: "Plumbing", location: "North West London", bg: "from-blue-700 to-cyan-900" },
+  { id: 6, title: "Kitchen Cabinet Install", service: "Carpentry", location: "West London", bg: "from-amber-800 to-amber-950" },
+  { id: 7, title: "Floor Tiling — Open Plan", service: "Tiling & Building Works", location: "Central London", bg: "from-stone-600 to-stone-900" },
+  { id: 8, title: "Property Maintenance", service: "General Maintenance", location: "North London", bg: "from-brand to-brand-dark" },
 ];
 
 export default function GalleryPage() {

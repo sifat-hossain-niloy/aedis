@@ -9,13 +9,11 @@ import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
-  "General Property Maintenance",
   "Plumbing",
   "Electrical",
-  "Tiling",
-  "Alarms",
-  "CCTV",
   "Carpentry",
+  "General Maintenance",
+  "Tiling & Building Works",
   "Other / Not Sure",
 ];
 
@@ -59,7 +57,7 @@ export function ContactForm() {
           phone: data.phone || "Not provided",
           service: data.service,
           message: data.message,
-          to_email: "hello@aedis.ltd",
+          to_email: "hello@aedissolutions.co.uk",
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
@@ -98,8 +96,8 @@ export function ContactForm() {
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
           <p>
             Something went wrong. Please try again or email us directly at{" "}
-            <a href="mailto:hello@aedis.ltd" className="font-semibold underline">
-              hello@aedis.ltd
+            <a href="mailto:hello@aedissolutions.co.uk" className="font-semibold underline">
+              hello@aedissolutions.co.uk
             </a>
             .
           </p>

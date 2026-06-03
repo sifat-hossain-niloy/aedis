@@ -96,7 +96,7 @@ export default function AboutPage() {
                 <p>
                   We set out to change that. While we are a young company, our
                   operatives bring years of hands-on experience across plumbing,
-                  electrical, carpentry, tiling, CCTV, alarms, and general
+                  electrical, carpentry, tiling, building works, and general
                   maintenance — all under one roof.
                 </p>
                 <p>

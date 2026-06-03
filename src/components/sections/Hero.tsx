@@ -106,7 +106,7 @@ export function Hero() {
           className="mt-16 pt-10 border-t border-white/10 flex flex-col sm:flex-row gap-6 sm:gap-12"
         >
           <a
-            href="mailto:hello@aedis.ltd"
+            href="mailto:hello@aedissolutions.co.uk"
             className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
           >
             <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
@@ -116,7 +116,7 @@ export function Hero() {
               <p className="text-xs text-white/45 uppercase tracking-wider">
                 Email Us
               </p>
-              <p className="text-sm font-semibold">hello@aedis.ltd</p>
+              <p className="text-sm font-semibold">hello@aedissolutions.co.uk</p>
             </div>
           </a>
           <div className="flex items-center gap-3 text-white/70">

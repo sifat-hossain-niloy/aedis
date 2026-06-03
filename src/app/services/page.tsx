@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Property Maintenance Services | Aedis Solutions Ltd",
     description:
-      "Expert plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance across London.",
+      "Expert plumbing, electrical, carpentry, general maintenance, and tiling & building works across London.",
     url: "https://www.aedis.ltd/services",
   },
 };

@@ -21,8 +21,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@aedis.ltd",
-    href: "mailto:hello@aedis.ltd",
+    value: "hello@aedissolutions.co.uk",
+    href: "mailto:hello@aedissolutions.co.uk",
     description: "We respond to all enquiries promptly",
   },
   {

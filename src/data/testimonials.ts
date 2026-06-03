@@ -35,10 +35,10 @@ export const testimonials: Testimonial[] = [
   {
     id: 4,
     name: "David T.",
-    location: "Southgate",
+    location: "South West London",
     rating: 5,
-    text: "Excellent CCTV installation — the cameras are positioned perfectly and the remote viewing works great. Clear communication throughout and no hidden costs. Will definitely use again.",
-    service: "CCTV",
+    text: "Aedis rewired our property and the standard of work was excellent. Clean, professional, and completed on time. Every question was answered clearly and the price was very fair.",
+    service: "Electrical",
   },
   {
     id: 5,

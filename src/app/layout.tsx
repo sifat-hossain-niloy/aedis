@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     template: "%s | Aedis Solutions Ltd",
   },
   description:
-    "Professional property maintenance services across London. Plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance — delivered to a consistently high standard.",
+    "Professional property maintenance services across London. Plumbing, electrical, carpentry, tiling and building works, and general maintenance — delivered to a consistently high standard.",
   keywords: [
     "property maintenance London",
     "property maintenance company London",
     "plumber London",
     "electrician London",
-    "CCTV installation London",
     "carpentry London",
+    "tiling London",
     "property maintenance services",
     "Aedis Solutions",
   ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Aedis Solutions Ltd",
     title: "Aedis Solutions Ltd | Professional Property Maintenance London",
     description:
-      "Professional property maintenance across London. Plumbing, electrical, tiling, carpentry, alarms, CCTV and more.",
+      "Professional property maintenance across London. Plumbing, electrical, carpentry, tiling and general maintenance.",
     images: [
       {
         url: "/og-image.jpg",

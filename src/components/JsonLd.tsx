@@ -5,9 +5,9 @@ export function LocalBusinessJsonLd() {
     "@id": "https://www.aedis.ltd/#business",
     name: "Aedis Solutions Ltd",
     description:
-      "Professional property maintenance services across London including plumbing, electrical, tiling, carpentry, alarms, CCTV and general maintenance.",
+      "Professional property maintenance services across London including plumbing, electrical, carpentry, tiling & building works, and general maintenance.",
     url: "https://www.aedis.ltd",
-    email: "hello@aedis.ltd",
+    email: "hello@aedissolutions.co.uk",
     address: {
       "@type": "PostalAddress",
       streetAddress: "3rd Floor, 86-90 Paul Street",
@@ -27,13 +27,11 @@ export function LocalBusinessJsonLd() {
       "@type": "OfferCatalog",
       name: "Property Maintenance Services",
       itemListElement: [
-        "General Property Maintenance",
         "Plumbing",
         "Electrical",
-        "Tiling",
-        "Alarms",
-        "CCTV",
         "Carpentry",
+        "General Maintenance",
+        "Tiling & Building Works",
       ].map((service, i) => ({
         "@type": "Offer",
         position: i + 1,

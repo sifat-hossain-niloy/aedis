@@ -100,11 +100,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@aedis.ltd"
+                  href="mailto:hello@aedissolutions.co.uk"
                   className="flex items-start gap-3 text-sm text-white/70 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4 mt-0.5 shrink-0 text-brand-accent" />
-                  <span>hello@aedis.ltd</span>
+                  <span>hello@aedissolutions.co.uk</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
