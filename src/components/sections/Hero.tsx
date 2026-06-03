@@ -54,9 +54,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl"
           >
-            Expert plumbing, electrical, carpentry, CCTV, alarms, tiling and
-            general maintenance across London — carried out to a
-            consistently high standard, on time, every time.
+            Expert plumbing, electrical, carpentry, tiling and general
+            maintenance across London — carried out to a consistently
+            high standard, on time, every time.
           </motion.p>
 
           {/* CTAs */}

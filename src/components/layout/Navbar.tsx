@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -51,29 +52,23 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
 
-          {/* Logo */}
-          <Link href="/" className="shrink-0" aria-label="Aedis Solutions Ltd — Home">
-            {transparent ? (
-              /* White text version for dark hero background */
-              <div className="leading-none py-1">
-                <span className="font-extrabold text-[18px] tracking-widest text-white block">
-                  AEDIS
-                </span>
-                <span className="text-[9px] tracking-[0.25em] text-white/70 font-medium block">
-                  SOLUTIONS LTD
-                </span>
-              </div>
-            ) : (
-              /* Real logo on white navbar */
-              <Image
-                src="/logo.png"
-                alt="Aedis Solutions Ltd"
-                width={160}
-                height={52}
-                className="h-13 w-auto"
-                priority
-              />
+          {/* Logo — always the real image; white pill backdrop on dark hero */}
+          <Link
+            href="/"
+            className={cn(
+              "shrink-0 transition-all duration-300",
+              transparent ? "bg-white rounded-xl px-4 py-2 shadow-lg" : ""
             )}
+            aria-label="Aedis Solutions Ltd — Home"
+          >
+            <Image
+              src="/logo.png"
+              alt="Aedis Solutions Ltd"
+              width={180}
+              height={58}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
