@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -61,13 +60,11 @@ export function Navbar() {
             )}
             aria-label="Aedis Solutions Ltd — Home"
           >
-            <Image
-              src="/logo.png"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
               alt="Aedis Solutions Ltd"
-              width={180}
-              height={58}
               className="h-14 w-auto"
-              priority
             />
           </Link>
 

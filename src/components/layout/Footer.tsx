@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const serviceLinks = [
@@ -31,11 +30,10 @@ export function Footer() {
             <Link href="/" className="block mb-5" aria-label="Aedis Solutions Ltd — Home">
               {/* White logo on dark bg — use a white-tinted div or invert */}
               <div className="bg-white inline-block rounded-lg px-3 py-2">
-                <Image
-                  src="/logo.png"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
                   alt="Aedis Solutions Ltd"
-                  width={130}
-                  height={42}
                   className="h-10 w-auto"
                 />
               </div>

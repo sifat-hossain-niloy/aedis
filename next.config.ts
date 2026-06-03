@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Expose basePath to client/server components so public-folder
+  // assets (logo, etc.) can be prefixed correctly in static export.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 export default nextConfig;
