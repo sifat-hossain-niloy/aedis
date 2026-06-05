@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 
 // Specific coverage areas TBC — advertising London-wide for now
 
@@ -81,7 +81,7 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* Service area */}
+          {/* Service areas */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,9 +92,20 @@ export function Hero() {
               <MapPin className="w-4 h-4 text-brand-accent shrink-0" />
               <span>Covering:</span>
             </div>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium border border-white/15">
-              London-wide
-            </span>
+            {[
+              "Central London",
+              "North West London",
+              "West London",
+              "South West London",
+              "North London",
+            ].map((area) => (
+              <span
+                key={area}
+                className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium border border-white/15"
+              >
+                {area}
+              </span>
+            ))}
           </motion.div>
         </div>
 
@@ -105,8 +116,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-16 pt-10 border-t border-white/10 flex flex-col sm:flex-row gap-6 sm:gap-12"
         >
+          {/* Phone */}
           <a
-            href="mailto:hello@aedissolutions.co.uk"
+            href="tel:02033766566"
             className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
           >
             <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
@@ -114,22 +126,26 @@ export function Hero() {
             </div>
             <div>
               <p className="text-xs text-white/45 uppercase tracking-wider">
-                Email Us
+                Call Us
               </p>
-              <p className="text-sm font-semibold">hello@aedissolutions.co.uk</p>
+              <p className="text-sm font-semibold">0203 376 6566</p>
             </div>
           </a>
-          <div className="flex items-center gap-3 text-white/70">
-            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-              <MapPin className="w-4 h-4" />
+          {/* Email */}
+          <a
+            href="mailto:hello@aedis.ltd"
+            className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
+          >
+            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
+              <Mail className="w-4 h-4" />
             </div>
             <div>
               <p className="text-xs text-white/45 uppercase tracking-wider">
-                Service Area
+                Email Us
               </p>
-              <p className="text-sm font-semibold">London-wide</p>
+              <p className="text-sm font-semibold">hello@aedis.ltd</p>
             </div>
-          </div>
+          </a>
         </motion.div>
       </div>
     </section>
