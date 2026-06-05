@@ -46,9 +46,7 @@ export const services: Service[] = [
       "Socket and switch installation",
       "Lighting design and installation",
       "Fault finding and diagnosis",
-      "Consumer unit upgrades",
       "Full and partial rewires",
-      "Electrical Installation Condition Reports (EICR)",
     ],
     metaTitle: "Electrician London | Aedis Solutions Ltd",
     metaDescription:
@@ -58,7 +56,7 @@ export const services: Service[] = [
     slug: "carpentry",
     name: "Carpentry",
     shortDescription:
-      "Skilled carpentry for bespoke joinery, fitted furniture, and all woodwork.",
+      "Skilled carpentry and bespoke joinery.",
     longDescription:
       "From bespoke fitted wardrobes and kitchen cabinets to structural joinery and door fitting, our carpenters deliver craftsmanship of the highest standard. We take pride in every joint and finish, ensuring your carpentry work enhances your property and stands the test of time.",
     icon: "Hammer",

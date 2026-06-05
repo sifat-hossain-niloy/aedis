@@ -27,7 +27,7 @@ const pillars = [
 ];
 
 const keyPoints = [
-  "Professional, commercial-grade service — not a local handyman",
+  "Professional domestic and commercial service.",
   "Experienced operatives across all trades",
   "Transparent pricing with no hidden charges",
   "Clean, tidy working practices on every job",
@@ -49,9 +49,10 @@ export function AboutSection() {
               A Property Maintenance Company Built on High Standards
             </h2>
             <p className="text-slate-600 leading-relaxed mb-5">
-              Aedis Solutions Ltd was founded with one clear aim: to deliver property
-              maintenance at a genuinely professional and commercial level. Not a local
-              handyman — a structured, accountable business with quality at its core.
+              Aedis Solutions Ltd was established with a single purpose: to raise the
+              standard of property maintenance in London. Our commitment is simple —
+              quality workmanship, clear communication, and a service that landlords,
+              developers, and property managers can genuinely rely on.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
               Our team brings hands-on expertise across plumbing, electrical, carpentry,

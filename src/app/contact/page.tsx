@@ -37,7 +37,7 @@ const contactDetails = [
     label: "Working Hours",
     value: "Mon – Fri, 8am – 6pm",
     href: null,
-    description: "Emergency enquiries considered outside these hours",
+    description: "",
   },
 ];
 

@@ -81,6 +81,19 @@ export function Hero() {
             </Link>
           </motion.div>
 
+          {/* Emergency badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/20 border border-brand-accent/40 text-brand-accent text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse shrink-0" />
+              24-Hour Emergency Call-Outs Available
+            </span>
+          </motion.div>
+
           {/* Service areas */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}

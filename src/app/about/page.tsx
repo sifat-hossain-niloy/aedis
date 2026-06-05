@@ -88,10 +88,11 @@ export default function AboutPage() {
               />
               <div className="mt-6 space-y-5 text-slate-600 leading-relaxed">
                 <p>
-                  Aedis Solutions Ltd was established in London in 2026 by a team
-                  with deep trade experience and a shared frustration: that too
-                  many property maintenance providers fall short on reliability,
-                  communication, and finish quality.
+                  Aedis Solutions Ltd was established with a single purpose: to
+                  raise the standard of property maintenance in London. Our
+                  commitment is simple — quality workmanship, clear
+                  communication, and a service that landlords, developers, and
+                  property managers can genuinely rely on.
                 </p>
                 <p>
                   We set out to change that. While we are a young company, our
