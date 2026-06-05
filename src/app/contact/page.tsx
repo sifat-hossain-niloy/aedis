@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Clock, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -19,10 +19,17 @@ export const metadata: Metadata = {
 
 const contactDetails = [
   {
+    icon: Phone,
+    label: "Phone",
+    value: "0203 376 6566",
+    href: "tel:02033766566",
+    description: "We respond to all enquiries promptly",
+  },
+  {
     icon: Mail,
     label: "Email",
-    value: "hello@aedissolutions.co.uk",
-    href: "mailto:hello@aedissolutions.co.uk",
+    value: "hello@aedis.ltd",
+    href: "mailto:hello@aedis.ltd",
     description: "We respond to all enquiries promptly",
   },
   {
