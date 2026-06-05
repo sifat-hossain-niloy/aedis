@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -27,15 +26,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  // transparent only on desktop (lg+) homepage before scrolling
   const isHome = pathname === "/";
   const transparent = isHome && !scrolled && !menuOpen;
 
@@ -43,32 +41,40 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
+        // Mobile: always solid white
+        "bg-white shadow-sm border-b border-slate-100",
+        // Desktop: transparent on hero, white on scroll
         transparent
-          ? "bg-transparent"
-          : "bg-white shadow-sm border-b border-slate-100"
+          ? "lg:bg-transparent lg:shadow-none lg:border-transparent"
+          : "lg:bg-white lg:shadow-sm lg:border-slate-100"
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
+        <div className="flex items-center justify-between py-2 lg:py-3">
 
-          {/* Logo — always the real image; white pill backdrop on dark hero */}
+          {/* Logo
+              Mobile:  plain, no pill, compact height
+              Desktop transparent: white pill backdrop, full height
+              Desktop scrolled:    plain, full height                  */}
           <Link
             href="/"
+            aria-label="Aedis Solutions Ltd — Home"
             className={cn(
               "shrink-0 transition-all duration-300",
-              transparent ? "bg-white rounded-xl px-4 py-2 shadow-lg" : ""
+              // only add pill on desktop when hero is transparent
+              transparent ? "lg:bg-white lg:rounded-xl lg:px-4 lg:py-2 lg:shadow-lg" : ""
             )}
-            aria-label="Aedis Solutions Ltd — Home"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
               alt="Aedis Solutions Ltd"
-              className="h-14 w-auto"
+              // h-10 on mobile (fits nav bar), h-14 on desktop transparent pill
+              className="h-10 lg:h-14 w-auto"
             />
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop nav links (lg+) */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map(({ href, label }) => (
               <Link
@@ -95,10 +101,11 @@ export function Navbar() {
             <Link
               href="/contact"
               className={cn(
-                "hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200",
-                transparent
-                  ? "bg-white text-brand hover:bg-white/90 shadow-md"
-                  : "bg-brand-accent text-white hover:bg-brand-accent-hover shadow-md"
+                "hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md",
+                // Mobile/tablet (<lg): always blue since navbar is white
+                "bg-brand-accent text-white hover:bg-brand-accent-hover",
+                // Desktop transparent: switch to white
+                transparent && "lg:bg-white lg:text-brand lg:hover:bg-slate-50 lg:shadow-md"
               )}
             >
               Get a Quote
@@ -106,12 +113,8 @@ export function Navbar() {
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Toggle menu"
-              className={cn(
-                "lg:hidden p-2 rounded-md transition-colors",
-                transparent
-                  ? "text-white hover:bg-white/15"
-                  : "text-slate-700 hover:bg-slate-100"
-              )}
+              // Mobile is always white navbar → icon always dark
+              className="lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition-colors"
             >
               {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
