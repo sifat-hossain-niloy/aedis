@@ -91,10 +91,13 @@ export function Footer() {
             </h3>
             <ul className="space-y-4">
               <li>
-                <div className="flex items-start gap-3 text-sm text-white/70">
+                <a
+                  href="tel:02046521027"
+                  className="flex items-start gap-3 text-sm text-white/70 hover:text-white transition-colors"
+                >
                   <Phone className="w-4 h-4 mt-0.5 shrink-0 text-brand-accent" />
-                  <span>Phone number coming soon</span>
-                </div>
+                  <span>0204 652 1027</span>
+                </a>
               </li>
               <li>
                 <a
