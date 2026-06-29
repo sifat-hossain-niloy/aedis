@@ -131,7 +131,7 @@ export function Hero() {
         >
           {/* Phone */}
           <a
-            href="tel:02033766566"
+            href="tel:02046521027"
             className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
           >
             <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
@@ -141,7 +141,7 @@ export function Hero() {
               <p className="text-xs text-white/45 uppercase tracking-wider">
                 Call Us
               </p>
-              <p className="text-sm font-semibold">0203 376 6566</p>
+              <p className="text-sm font-semibold">0204 652 1027</p>
             </div>
           </a>
           {/* Email */}

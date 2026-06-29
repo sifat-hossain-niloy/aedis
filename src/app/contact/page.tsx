@@ -21,8 +21,8 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "0203 376 6566",
-    href: "tel:02033766566",
+    value: "0204 652 1027",
+    href: "tel:02046521027",
     description: "We respond to all enquiries promptly",
   },
   {
