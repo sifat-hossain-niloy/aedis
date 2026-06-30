@@ -88,10 +88,13 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/20 border border-brand-accent/40 text-brand-accent text-sm font-semibold">
-              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse shrink-0" />
+            <a
+              href="tel:02046521027"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/50 text-red-400 text-sm font-semibold hover:bg-red-500/30 transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
               24-Hour Emergency Call-Outs Available
-            </span>
+            </a>
           </motion.div>
 
           {/* Service areas */}
@@ -132,16 +135,16 @@ export function Hero() {
           {/* Phone */}
           <a
             href="tel:02046521027"
-            className="flex items-center gap-3 hover:opacity-90 transition-opacity group"
+            className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
           >
-            <div className="w-10 h-10 rounded-lg bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/30">
-              <Phone className="w-4 h-4 text-white" />
+            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
+              <Phone className="w-4 h-4" />
             </div>
             <div>
               <p className="text-xs text-white/45 uppercase tracking-wider">
-                Call Us Now
+                Call Us
               </p>
-              <p className="text-sm font-bold text-red-400">0204 652 1027</p>
+              <p className="text-sm font-semibold">0204 652 1027</p>
             </div>
           </a>
           {/* Email */}
