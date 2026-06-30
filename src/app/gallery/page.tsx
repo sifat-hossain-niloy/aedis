@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Camera } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/AnimatedSection";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "Gallery — Our Work",
@@ -18,15 +19,15 @@ export const metadata: Metadata = {
   },
 };
 
-const placeholderProjects = [
-  { id: 1, title: "Bathroom Renovation", service: "Plumbing & Tiling", location: "West London", bg: "from-cyan-800 to-blue-900" },
-  { id: 2, title: "Kitchen Tiling", service: "Tiling & Building Works", location: "North London", bg: "from-stone-700 to-slate-800" },
-  { id: 3, title: "Bespoke Fitted Wardrobes", service: "Carpentry", location: "Central London", bg: "from-amber-700 to-orange-900" },
-  { id: 4, title: "Electrical Rewire", service: "Electrical", location: "South West London", bg: "from-yellow-700 to-amber-900" },
-  { id: 5, title: "Full Bathroom Fit-Out", service: "Plumbing", location: "North West London", bg: "from-blue-700 to-cyan-900" },
-  { id: 6, title: "Kitchen Cabinet Install", service: "Carpentry", location: "West London", bg: "from-amber-800 to-amber-950" },
-  { id: 7, title: "Floor Tiling — Open Plan", service: "Tiling & Building Works", location: "Central London", bg: "from-stone-600 to-stone-900" },
-  { id: 8, title: "Property Maintenance", service: "General Maintenance", location: "North London", bg: "from-brand to-brand-dark" },
+const projects = [
+  { id: 1, title: "Bathroom Renovation",        service: "Plumbing & Tiling",      location: "West London",       img: "1-bathroom-renovation.jpg" },
+  { id: 2, title: "Kitchen Renovation",          service: "Tiling & Building Works", location: "North London",      img: "2-kitchen-tiling.jpg" },
+  { id: 3, title: "Bespoke Joinery & Shelving",  service: "Carpentry",              location: "Central London",    img: "3-fitted-wardrobes.jpg" },
+  { id: 4, title: "Electrical Rewire",           service: "Electrical",             location: "South West London", img: "4-electrical-rewire.jpg" },
+  { id: 5, title: "Full Bathroom Fit-Out",       service: "Plumbing",               location: "North West London", img: "5-bathroom-fitout.jpg" },
+  { id: 6, title: "Kitchen Cabinet Install",     service: "Carpentry",              location: "West London",       img: "6-kitchen-cabinets.jpg" },
+  { id: 7, title: "Large-Format Tiling",         service: "Tiling & Building Works", location: "Central London",   img: "7-floor-tiling.jpg" },
+  { id: 8, title: "Property Maintenance",        service: "General Maintenance",    location: "North London",      img: "8-property-maintenance.jpg" },
 ];
 
 export default function GalleryPage() {
@@ -57,7 +58,7 @@ export default function GalleryPage() {
             <SectionHeading
               eyebrow="Portfolio"
               title="Completed Projects"
-              description="We are actively building our portfolio. Real project photography will be added shortly — check back soon."
+              description="A selection of work from across our services. Real project photos will be added as our portfolio grows."
             />
           </AnimatedSection>
 
@@ -65,19 +66,17 @@ export default function GalleryPage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
             staggerDelay={0.06}
           >
-            {placeholderProjects.map((project) => (
+            {projects.map((project) => (
               <StaggerItem key={project.id}>
                 <div className="group rounded-xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  {/* Placeholder image */}
-                  <div
-                    className={`bg-gradient-to-br ${project.bg} aspect-[4/3] flex items-center justify-center relative`}
-                  >
-                    <Camera className="w-10 h-10 text-white/30" />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white text-xs font-medium bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                        Photo coming soon
-                      </span>
-                    </div>
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${BASE}/gallery/${project.img}`}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4 bg-white">
                     <h3 className="font-bold text-slate-900 text-sm mb-1">
@@ -99,14 +98,12 @@ export default function GalleryPage() {
 
           <AnimatedSection className="mt-16 text-center" delay={0.2}>
             <div className="bg-slate-50 rounded-2xl border border-slate-200 p-10 max-w-lg mx-auto">
-              <Camera className="w-10 h-10 text-slate-400 mx-auto mb-4" />
               <h3 className="font-bold text-slate-900 text-lg mb-2">
-                More Coming Soon
+                More Projects Coming Soon
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                We are photographing completed projects and will be updating
-                this gallery regularly. Follow us on social media or check back
-                to see our latest work.
+                We are photographing completed client jobs and will be updating
+                this gallery regularly. Check back soon to see our latest work.
               </p>
             </div>
           </AnimatedSection>
