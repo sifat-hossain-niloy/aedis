@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  Wrench, Droplets, Zap, LayoutGrid, Hammer,
-  CheckCircle2, ArrowLeft, ArrowRight, LucideIcon,
-} from "lucide-react";
+import { CheckCircle2, ArrowLeft, ArrowRight } from "lucide-react";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { services, getServiceBySlug } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/AnimatedSection";
 
-const iconMap: Record<string, LucideIcon> = {
-  Wrench, Droplets, Zap, LayoutGrid, Hammer,
-};
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -41,7 +36,6 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
-  const Icon = iconMap[service.icon] ?? Wrench;
   const otherServices = services.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
@@ -58,11 +52,12 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
               All Services
             </Link>
             <div className="flex items-start gap-5">
-              <div
-                className={`w-16 h-16 rounded-2xl ${service.accentColor} flex items-center justify-center shrink-0`}
-              >
-                <Icon className="w-7 h-7" />
-              </div>
+              <ServiceIcon
+                slug={service.slug}
+                icon={service.icon}
+                accentColor={service.accentColor}
+                variant="hero"
+              />
               <div>
                 <p className="text-brand-accent text-sm font-semibold uppercase tracking-widest mb-2">
                   Our Services
@@ -158,18 +153,18 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
               staggerDelay={0.08}
             >
               {otherServices.map((s) => {
-                const RelatedIcon = iconMap[s.icon] ?? Wrench;
                 return (
                   <StaggerItem key={s.slug}>
                     <Link
                       href={`/services/${s.slug}`}
                       className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-200 hover:border-brand-accent hover:shadow-md transition-all duration-300"
                     >
-                      <div
-                        className={`w-10 h-10 rounded-lg ${s.accentColor} flex items-center justify-center shrink-0`}
-                      >
-                        <RelatedIcon className="w-4 h-4" />
-                      </div>
+                      <ServiceIcon
+                        slug={s.slug}
+                        icon={s.icon}
+                        accentColor={s.accentColor}
+                        variant="mini"
+                      />
                       <span className="font-semibold text-sm text-slate-800 group-hover:text-brand transition-colors">
                         {s.name}
                       </span>

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  Wrench, Droplets, Zap, LayoutGrid, Hammer,
-  ArrowRight, LucideIcon,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { services } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -23,9 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-const iconMap: Record<string, LucideIcon> = {
-  Wrench, Droplets, Zap, LayoutGrid, Hammer,
-};
 
 export default function ServicesPage() {
   return (
@@ -57,16 +52,16 @@ export default function ServicesPage() {
             staggerDelay={0.08}
           >
             {services.map((service) => {
-              const Icon = iconMap[service.icon] ?? Wrench;
               return (
                 <StaggerItem key={service.slug}>
                   <div className="group bg-white border border-slate-200 rounded-2xl p-8 hover:border-brand-accent hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start gap-5">
-                      <div
-                        className={`w-14 h-14 rounded-xl ${service.accentColor} flex items-center justify-center shrink-0`}
-                      >
-                        <Icon className="w-6 h-6" />
-                      </div>
+                      <ServiceIcon
+                        slug={service.slug}
+                        icon={service.icon}
+                        accentColor={service.accentColor}
+                        variant="list"
+                      />
                       <div className="flex-1 min-w-0">
                         <h2 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand transition-colors">
                           {service.name}

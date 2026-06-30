@@ -1,20 +1,9 @@
 import Link from "next/link";
-import { Wrench, ArrowRight, LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
 import { Container } from "@/components/ui/Container";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { AnimatedSection, StaggerChildren, StaggerItem } from "@/components/AnimatedSection";
-
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-// Slug → custom illustrated icon filename (in /public/service-icons/)
-const customIconMap: Record<string, string> = {
-  "plumbing":              `${BASE}/service-icons/plumbing.png`,
-  "electrical":            `${BASE}/service-icons/electrical.png`,
-  "carpentry":             `${BASE}/service-icons/carpentry.png`,
-  "tiling-building-works": `${BASE}/service-icons/building.png`,
-};
-
-const fallbackIconMap: Record<string, LucideIcon> = { Wrench };
 
 export function ServicesGrid() {
   return (
@@ -49,8 +38,6 @@ export function ServicesGrid() {
           staggerDelay={0.08}
         >
           {services.map((service) => {
-            const customIcon = customIconMap[service.slug];
-            const FallbackIcon = fallbackIconMap[service.icon] ?? Wrench;
             return (
               <StaggerItem key={service.slug}>
                 <Link
@@ -61,22 +48,12 @@ export function ServicesGrid() {
                   <div className="h-1.5 bg-brand-accent w-0 group-hover:w-full transition-all duration-500" />
 
                   <div className="p-7 flex flex-col flex-1">
-                    {customIcon ? (
-                      <div className="h-24 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={customIcon}
-                          alt={service.name}
-                          className="h-full w-auto object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div
-                        className={`w-12 h-12 rounded-xl ${service.accentColor} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200`}
-                      >
-                        <FallbackIcon className="w-5 h-5" />
-                      </div>
-                    )}
+                    <ServiceIcon
+                      slug={service.slug}
+                      icon={service.icon}
+                      accentColor={service.accentColor}
+                      variant="card"
+                    />
 
                     <h3 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-brand transition-colors">
                       {service.name}
