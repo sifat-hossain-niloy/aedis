@@ -37,11 +37,11 @@ export function CTABanner({
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="mailto:hello@aedissolutions.co.uk"
+              href="mailto:hello@aedis.ltd"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg text-base hover:bg-white/20 transition-all duration-200 border border-white/20 whitespace-nowrap"
             >
               <Mail className="w-4 h-4" />
-              hello@aedissolutions.co.uk
+              hello@aedis.ltd
             </a>
           </div>
         </AnimatedSection>

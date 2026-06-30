@@ -132,10 +132,10 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
-                    href="mailto:hello@aedissolutions.co.uk"
+                    href="mailto:hello@aedis.ltd"
                     className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-white/10 border border-white/20 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors"
                   >
-                    hello@aedissolutions.co.uk
+                    hello@aedis.ltd
                   </a>
                 </div>
               </AnimatedSection>

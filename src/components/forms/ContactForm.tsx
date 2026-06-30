@@ -70,7 +70,7 @@ export function ContactForm() {
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || "Not provided"}\nService: ${data.service}\n\n${data.message}`
       );
-      window.location.href = `mailto:hello@aedissolutions.co.uk?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:hello@aedis.ltd?subject=${subject}&body=${body}`;
       return;
     }
 
@@ -80,7 +80,7 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: key,
-          // Email delivered to: set in Web3Forms dashboard (hello@aedissolutions.co.uk)
+          // Email delivered to: set in Web3Forms dashboard (hello@aedis.ltd)
           subject: `New Enquiry — ${data.service} | ${data.name}`,
           from_name: "Aedis Solutions Website",
           name: data.name,
@@ -120,7 +120,7 @@ export function ContactForm() {
         <p className="text-slate-600 leading-relaxed max-w-sm mb-6">
           Thank you for getting in touch. We will review your enquiry and
           respond to{" "}
-          <span className="font-semibold">hello@aedissolutions.co.uk</span>{" "}
+          <span className="font-semibold">hello@aedis.ltd</span>{" "}
           — usually within one business day.
         </p>
         <button
@@ -156,10 +156,10 @@ export function ContactForm() {
             <p>
               {errorMsg} Please try again or email us directly at{" "}
               <a
-                href="mailto:hello@aedissolutions.co.uk"
+                href="mailto:hello@aedis.ltd"
                 className="font-semibold underline"
               >
-                hello@aedissolutions.co.uk
+                hello@aedis.ltd
               </a>
               .
             </p>

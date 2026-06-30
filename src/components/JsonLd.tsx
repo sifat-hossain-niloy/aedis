@@ -7,7 +7,7 @@ export function LocalBusinessJsonLd() {
     description:
       "Professional property maintenance services across London including plumbing, electrical, carpentry, tiling & building works, and general maintenance.",
     url: "https://www.aedis.ltd",
-    email: "hello@aedissolutions.co.uk",
+    email: "hello@aedis.ltd",
     address: {
       "@type": "PostalAddress",
       streetAddress: "3rd Floor, 86-90 Paul Street",

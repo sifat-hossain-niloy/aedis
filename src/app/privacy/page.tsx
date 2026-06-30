@@ -53,13 +53,13 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-slate-900 mt-8 mb-3">6. Your Rights</h2>
             <p>
               Under UK GDPR, you have the right to access, correct, or delete your personal data. To exercise these rights, contact us at{" "}
-              <a href="mailto:hello@aedissolutions.co.uk" className="text-brand-accent hover:underline">hello@aedissolutions.co.uk</a>.
+              <a href="mailto:hello@aedis.ltd" className="text-brand-accent hover:underline">hello@aedis.ltd</a>.
             </p>
 
             <h2 className="text-xl font-bold text-slate-900 mt-8 mb-3">7. Contact</h2>
             <p>
               For privacy-related queries, contact us at{" "}
-              <a href="mailto:hello@aedissolutions.co.uk" className="text-brand-accent hover:underline">hello@aedissolutions.co.uk</a>{" "}
+              <a href="mailto:hello@aedis.ltd" className="text-brand-accent hover:underline">hello@aedis.ltd</a>{" "}
               or write to us at our registered address.
             </p>
           </div>
