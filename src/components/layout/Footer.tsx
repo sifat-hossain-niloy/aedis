@@ -14,8 +14,16 @@ const companyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Blog" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact Us" },
+];
+
+const areaLinks = [
+  { href: "/areas/north-london", label: "North London" },
+  { href: "/areas/hendon", label: "Hendon" },
+  { href: "/areas/finchley", label: "Finchley" },
+  { href: "/areas/golders-green", label: "Golders Green" },
 ];
 
 export function Footer() {
@@ -23,7 +31,7 @@ export function Footer() {
     <footer className="bg-brand-dark text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand column */}
           <div className="lg:col-span-1">
@@ -72,6 +80,25 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {companyLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Areas */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-white/50 mb-5">
+              Areas We Cover
+            </h3>
+            <ul className="space-y-2.5">
+              {areaLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
