@@ -34,7 +34,6 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          BASE_PATH: /aedis
           NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
           NEXT_PUBLIC_GA_ID: ${{ secrets.GA_ID }}
 
