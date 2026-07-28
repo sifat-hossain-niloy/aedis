@@ -9,6 +9,7 @@ const customIconMap: Record<string, string> = {
   "plumbing":              `${BASE}/service-icons/plumbing.png`,
   "electrical":            `${BASE}/service-icons/electrical.png`,
   "carpentry":             `${BASE}/service-icons/carpentry.png`,
+  "general-maintenance":   `${BASE}/service-icons/general-maintenance.png`,
   "tiling-building-works": `${BASE}/service-icons/building.png`,
 };
 
