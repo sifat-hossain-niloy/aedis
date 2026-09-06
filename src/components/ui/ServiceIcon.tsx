@@ -6,9 +6,9 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 // Slug → custom illustrated icon (must exist in /public/service-icons/)
 const customIconMap: Record<string, string> = {
-  "plumbing":              `${BASE}/service-icons/plumbing.png`,
-  "electrical":            `${BASE}/service-icons/electrical.png`,
-  "carpentry":             `${BASE}/service-icons/carpentry.png`,
+  "plumbing":              `${BASE}/service-icons/plumbing.svg`,
+  "electrical":            `${BASE}/service-icons/electrical.svg`,
+  "carpentry":             `${BASE}/service-icons/carpentry.svg`,
   "general-maintenance":   `${BASE}/service-icons/general-maintenance.png`,
   "tiling-building-works": `${BASE}/service-icons/building.png`,
 };
